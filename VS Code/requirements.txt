@@ -1,9 +1,0 @@
-streamlit
-pandas
-numpy
-catboost
-scikit-learn
-torch
-torchvision
-Pillow
-joblib
