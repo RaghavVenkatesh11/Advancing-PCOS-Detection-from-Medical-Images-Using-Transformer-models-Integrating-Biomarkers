@@ -5,24 +5,24 @@
 ![Framework](https://img.shields.io/badge/Framework-PyTorch%20%7C%20TensorFlow-orange)
 
 ## 📌 Project Overview
-[cite_start]This project implements a **Hybrid Multimodal Artificial Intelligence Framework** for the detection of Polycystic Ovary Syndrome (PCOS)[cite: 118]. Unlike traditional single-stream diagnostic tools, this system utilizes a **Dual-Stream Late Fusion Architecture** that integrates:
+This project implements a **Hybrid Multimodal Artificial Intelligence Framework** for the detection of Polycystic Ovary Syndrome (PCOS). Unlike traditional single-stream diagnostic tools, this system utilizes a **Dual-Stream Late Fusion Architecture** that integrates:
 
-1.  [cite_start]**Unstructured Visual Data:** Ovarian ultrasound images processed via a **Swin Transformer** (Tiny Variant) to capture global contextual features and texture patterns[cite: 119, 131].
-2.  [cite_start]**Structured Clinical Data:** The "Golden 8" clinical biomarkers processed via a **CatBoost Classifier** to handle non-linear associations[cite: 126, 142].
+1.  **Unstructured Visual Data:** Ovarian ultrasound images processed via a **Swin Transformer** (Tiny Variant) to capture global contextual features and texture patterns.
+2.  **Structured Clinical Data:** The "Golden 8" clinical biomarkers processed via a **CatBoost Classifier** to handle non-linear associations.
 
-[cite_start]By combining these modalities through a Multi-Layer Perceptron (MLP), the system reduces false positives and improves diagnostic reliability compared to using imaging or biomarkers alone[cite: 147, 163].
+By combining these modalities through a Multi-Layer Perceptron (MLP), the system reduces false positives and improves diagnostic reliability compared to using imaging or biomarkers alone.
 
 ## 🚀 Key Features
-* [cite_start]**Multimodal Fusion:** Integrates ultrasound imaging with hormonal and metabolic indicators[cite: 30].
-* [cite_start]**Swin Transformer Backbone:** Utilizes hierarchical vision transformers with shifted windows for robust image feature extraction[cite: 138].
-* [cite_start]**CatBoost Clinical Encoder:** Handles categorical and numerical data with high resistance to overfitting[cite: 142].
-* [cite_start]**High Performance:** The proposed model achieves a Recall of **98.5%** and an F1-Score of **99.09%**[cite: 199, 202].
+* **Multimodal Fusion:** Integrates ultrasound imaging with hormonal and metabolic indicators.
+* **Swin Transformer Backbone:** Utilizes hierarchical vision transformers with shifted windows for robust image feature extraction.
+* **CatBoost Clinical Encoder:** Handles categorical and numerical data with high resistance to overfitting.
+* **High Performance:** The proposed model achieves a Recall of **98.5%** and an F1-Score of **99.09%**.
 * **Interactive UI:** Powered by **Streamlit** for real-time diagnostic support.
 
 ## 📂 Dataset
 The model was developed using a dataset comprising:
-* [cite_start]**Ultrasound Images:** 1,924 transvaginal ultrasound images, augmented to approximately 9,800 samples (resized to 224x224 pixels)[cite: 122, 172, 193].
-* [cite_start]**Clinical Data:** Records from 541 patients, utilizing **8 key biomarkers**[cite: 122, 126]:
+* **Ultrasound Images:** 1,924 transvaginal ultrasound images, augmented to approximately 9,800 samples (resized to 224x224 pixels).
+* **Clinical Data:** Records from 541 patients, utilizing **8 key biomarkers**:
     * Age, BMI, Cycle Length, Waist-to-Hip Ratio
     * FSH (Follicle-Stimulating Hormone), LH (Luteinizing Hormone)
     * AMH (Anti-Müllerian Hormone)
@@ -34,13 +34,13 @@ The model was developed using a dataset comprising:
 > (https://www.kaggle.com/datasets/rvenkateswarareddy/dataset)
 
 ## 🛠️ Methodology
-[cite_start]The pipeline consists of four distinct stages[cite: 120]:
+The pipeline consists of four distinct stages:
 1.  **Preprocessing:**
-    * [cite_start]*Images:* Z-score normalization and augmentation (rotation, flipping, brightness jitter)[cite: 129, 130].
-    * [cite_start]*Clinical:* Median imputation for missing values and feature selection[cite: 125].
-2.  [cite_start]**Feature Extraction:** Independent processing via Swin Transformer (Visual) and CatBoost (Clinical)[cite: 131, 142].
-3.  [cite_start]**Fusion:** Concatenation of probability outputs from both streams[cite: 146].
-4.  [cite_start]**Classification:** A fully connected MLP with a sigmoid activation function outputs a probability score (Threshold: 0.5)[cite: 147, 153].
+    * *Images:* Z-score normalization and augmentation (rotation, flipping, brightness jitter).
+    * *Clinical:* Median imputation for missing values and feature selection.
+2.  **Feature Extraction:** Independent processing via Swin Transformer (Visual) and CatBoost (Clinical).
+3.  **Fusion:** Concatenation of probability outputs from both streams.
+4.  **Classification:** A fully connected MLP with a sigmoid activation function outputs a probability score (Threshold: 0.5).
 
 ## 💻 Installation
 
@@ -51,7 +51,7 @@ The model was developed using a dataset comprising:
 ### Setup
 1.  Clone the repository:
     ```bash
-    git clone [https://github.com/yourusername/pcos-multimodal-detection.git](https://github.com/yourusername/pcos-multimodal-detection.git)
+    git clone [https://github.com/RaghavVenkatesh11/pcos-multimodal-detection.git](https://github.com/RaghavVenkatesh11/pcos-multimodal-detection.git)
     cd pcos-multimodal-detection
     ```
 
