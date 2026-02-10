@@ -59,7 +59,7 @@ The pipeline consists of four distinct stages:
     ```bash
     pip install -r requirements.txt
     ```
-
+3. Download the models from https://www.kaggle.com/models/rvenkateswarareddy/pcos-detection-model/ and paste it in the github directory. Create a new folder named models and paste it inside it. 
 ## ▶️ Usage
 To launch the web interface, run the following command in your terminal:
 
